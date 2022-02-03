@@ -96,11 +96,11 @@ $(document).ready(function(){initNavTree('_wordle_o_o_8cpp.html',''); initResiza
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for WordleOO.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_wordle_o_o_8cpp__incl.svg" width="588" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_wordle_o_o_8cpp__incl.svg" width="666" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="_wordle_o_o_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -116,9 +116,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a67a0db04d321a74b7e7fcfd3f1a3f70b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> { <a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d">NOT_FOUND</a>
+<tr class="memitem:a67a0db04d321a74b7e7fcfd3f1a3f70b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> { <a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba29b49ac013c4624b51d17a503baf07d1">NOT_USED</a>
 , <a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70baade1fa51438c9f998f7e79286b77ed6d">FOUND_WRONG_PLACE</a>
 , <a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba3e918e9c9f594bda6b0cf358391c3b1a">FOUND</a>
+, <a class="el" href="_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d">NOT_FOUND</a>
  }</td></tr>
 <tr class="separator:a67a0db04d321a74b7e7fcfd3f1a3f70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -137,6 +138,8 @@ Variables</h2></td></tr>
 <tr class="separator:a616cacb3cbac184146fec8b19623975a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2deb61fc54ae67d6769499949e3ab059"><td class="memItemLeft" align="right" valign="top">const HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_wordle_o_o_8cpp.html#a2deb61fc54ae67d6769499949e3ab059">h</a> = GetStdHandle(STD_OUTPUT_HANDLE)</td></tr>
 <tr class="separator:a2deb61fc54ae67d6769499949e3ab059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62354bd5a11bc87a11a1d53a2abb623"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_wordle_o_o_8cpp.html#ab62354bd5a11bc87a11a1d53a2abb623">ALPHABET</a> = &quot;abcdefghijklmnopqrstuvwxyz&quot;</td></tr>
+<tr class="separator:ab62354bd5a11bc87a11a1d53a2abb623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a67a0db04d321a74b7e7fcfd3f1a3f70b" name="a67a0db04d321a74b7e7fcfd3f1a3f70b"></a>
@@ -158,14 +161,15 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Status enum for the 3 status is char could be, NOT_FOUND, means the char is not in the word FOUND_WRONG_PLACE means the char is in the word, but not in this location FOUND means the char is in the word and in the correct place </p>
+<p >Status enum for the 3 status is char could be, NOT_USED, means the char hasn't been guessed yet FOUND_WRONG_PLACE means the char is in the word, but not in this location FOUND means the char is in the word and in the correct place NOT_FOUND means the char is not in the word </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d" name="a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d"></a>NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a67a0db04d321a74b7e7fcfd3f1a3f70ba29b49ac013c4624b51d17a503baf07d1" name="a67a0db04d321a74b7e7fcfd3f1a3f70ba29b49ac013c4624b51d17a503baf07d1"></a>NOT_USED&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a67a0db04d321a74b7e7fcfd3f1a3f70baade1fa51438c9f998f7e79286b77ed6d" name="a67a0db04d321a74b7e7fcfd3f1a3f70baade1fa51438c9f998f7e79286b77ed6d"></a>FOUND_WRONG_PLACE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a67a0db04d321a74b7e7fcfd3f1a3f70ba3e918e9c9f594bda6b0cf358391c3b1a" name="a67a0db04d321a74b7e7fcfd3f1a3f70ba3e918e9c9f594bda6b0cf358391c3b1a"></a>FOUND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d" name="a67a0db04d321a74b7e7fcfd3f1a3f70ba8c02547a8a3b02382bac3557bcb2280d"></a>NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00018">18</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00021">21</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -185,17 +189,32 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00296">296</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00363">363</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_wordle_o_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="528"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_wordle_o_o_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab62354bd5a11bc87a11a1d53a2abb623" name="ab62354bd5a11bc87a11a1d53a2abb623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62354bd5a11bc87a11a1d53a2abb623">&#9670;&nbsp;</a></span>ALPHABET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string ALPHABET = &quot;abcdefghijklmnopqrstuvwxyz&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00013">13</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a2deb61fc54ae67d6769499949e3ab059" name="a2deb61fc54ae67d6769499949e3ab059"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2deb61fc54ae67d6769499949e3ab059">&#9670;&nbsp;</a></span>h</h2>
 
@@ -208,7 +227,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00011">11</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00012">12</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +243,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00009">9</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00010">10</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -240,7 +259,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00008">8</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00009">9</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -256,7 +275,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00010">10</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00011">11</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>

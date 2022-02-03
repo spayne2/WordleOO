@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['letter_0',['letter',['../class_guess_character.html#a23c13dbaa8bb345e03e6d2d8bde30057',1,'GuessCharacter']]]
+  ['isvalidword_0',['isValidWord',['../class_game.html#a0fe1584b29f33bf17dd976447fc0f8ce',1,'Game']]]
 ];

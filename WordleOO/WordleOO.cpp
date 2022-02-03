@@ -4,22 +4,26 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <map>
 using namespace std;
 const int WORD_LENGTH = 5; //the length of the word that the player will be guessing
 const int TRIES = 6; //the number of tried
 const string WORD_LIST_FILE = "word_list.txt"; // the name of the file with all the words int
 const HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); //get a handle on the console
+const string ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 /**
 * Status enum for the 3 status is char could be, 
-* NOT_FOUND, means the char is not in the word
+* NOT_USED, means the char hasn't been guessed yet
 * FOUND_WRONG_PLACE means the char is in the word, but not in this location
 * FOUND means the char is in the word and in the correct place
+* NOT_FOUND means the char is not in the word
 */
 enum class Status 
 {
-	NOT_FOUND,
+	NOT_USED,
 	FOUND_WRONG_PLACE,
-	FOUND
+	FOUND,
+	NOT_FOUND
 };
 /**
 * GuessCharacter is the class that represent a single character in each guess word.
@@ -32,9 +36,9 @@ private:
 	char letter;
 	Status status;
 public:
-	GuessCharacter() { letter = '1'; status = Status::NOT_FOUND; }
+	GuessCharacter() { letter = '1'; status = Status::NOT_USED; }
 	/**
-	* displayChar function display the characted by its status
+	* displayChar function display the character by its status
 	*/
 	void displayChar() 
 	{
@@ -48,18 +52,30 @@ public:
 			{
 				SetConsoleTextAttribute(h, 2); //display green
 			}
+			else if (status == Status::NOT_FOUND)
+			{
+				SetConsoleTextAttribute(h, 8); //display black
+			}
 			cout << letter;
 			SetConsoleTextAttribute(h, 7); //dispay white
 		}
 	}		
-	//setters for letter and status, getters not needed
+	//setters for letter and status
 	void setLetter(char letter)
 	{
 		this->letter = letter;
 	}
-	void setStats(Status status)
+	void setStatus(Status status)
 	{
 		this->status = status;
+	}
+	Status getStatus()
+	{
+		return status;
+	}
+	char getLetter()
+	{
+		return letter;
 	}
 };
 /**
@@ -68,8 +84,7 @@ public:
 class GuessWord
 {
 private:
-	GuessCharacter guessCharacters[WORD_LENGTH]; //array of guess charactes
-
+	GuessCharacter guessCharacters[WORD_LENGTH]; //array of guess characters
 public:
 	/**
 	* setGuessCharacters sets the guess characted on the guess word, compares to the word to find to get status
@@ -81,19 +96,27 @@ public:
 			guessCharacters[i].setLetter(guess[i]);
 			if (guess[i] == wordToFind[i])
 			{
-				guessCharacters[i].setStats(Status::FOUND);
+				guessCharacters[i].setStatus(Status::FOUND);
 			}//check if the char is in the word
 			else if (wordToFind.find(guess[i])<wordToFind.length())  //.find() return the position of the letter in the word, so if it returns less than the word length, we know its there
 			{
-				guessCharacters[i].setStats(Status::FOUND_WRONG_PLACE);
+				guessCharacters[i].setStatus(Status::FOUND_WRONG_PLACE);
 			}
 			else
 			{
-				guessCharacters[i].setStats(Status::NOT_FOUND);
-			}
-			
+				guessCharacters[i].setStatus(Status::NOT_FOUND);
+			}			
 		}
 	}
+	
+	/**
+	* getGuessCharacters returns a pointer to the array of guesscharacters
+	*/
+	GuessCharacter* getGuessCharacters()
+	{
+		return guessCharacters; map<char, GuessCharacter> availableLetters;//holds all letters that can be used in the game;
+	}
+
 	/**
 	* display prints the word with colours to the console, for the player to see how they are doing
 	*/
@@ -116,6 +139,9 @@ public:
 class Game
 {
 private:
+	//using a map to store the character (the index) and then a guess character, this can be used
+	//to look up a guess character by its letter and then set the status without using a loop
+	map<char, GuessCharacter> availableLetters;//holds all letters that can be used in the game;
 	GuessWord guessWords[TRIES];//the array of all the guesses so far
 	vector<string> wordList;//all possible words
 	string wordToFind; //the word the player is looking for.
@@ -181,7 +207,7 @@ private:
 		}
 	}
 	/**
-	* selectWord generates a random number, and selects a word to play with for the game
+	* selectWord generates a random number, and selects a word to play with for the game. Called from the play function
 	*/
 	void selectWord()
 	{
@@ -189,11 +215,11 @@ private:
 		wordToFind = wordList[(rand() % wordList.size())];
 	}
 	/**
-	* welcomeMessage display the player instructions
+	* welcomeMessage display the player instructions, called from play()
 	*/
 	void welcomeMessage()
 	{
-		cout << "Welcome to World OO, you have " << TRIES << " tried to guess the word " << endl;
+		cout << "Welcome to World OO, you have " << TRIES << " tries to guess the word " << endl << endl;
 		cout << "The letter will be ";
 		SetConsoleTextAttribute(h, 6);
 		cout << "Yellow";
@@ -204,15 +230,29 @@ private:
 		SetConsoleTextAttribute(h, 2);
 		cout << "Green";
 		SetConsoleTextAttribute(h, 7);
-		cout << " if the character is in the word and in the correct place" << endl;
+		cout << " if the character is in the word and in the correct place" << endl << endl;
 	}
 	
+	/**
+	* setAvailableWordsStatus set the status of each letter so the player can see what they have left.
+	*/
+	void setAvailableWordsStatus()
+	{
+		for (int i = 0; i < WORD_LENGTH; i++)
+		{
+			GuessCharacter *guessChars = guessWords[turn].getGuessCharacters(); //get the current guess word
+			//using the map, copy the status from the guessed word to the available letters
+			availableLetters[guessChars[i].getLetter()].setStatus(guessChars[i].getStatus()); 			
+		}
+	}
+
 	/**
 	* checkAndDisplayGuess displays the guess with colour coding, and then tell the player if they have won, or if it is game over
 	*/
 	bool checkAndDisplayGuess(string guess)
 	{
 		guessWords[turn].setGuessCharacters(guess, wordToFind); // the the guess characters, the word to find is needed to it can be compared to
+		setAvailableWordsStatus();
 		system("cls"); //clear the screen
 		welcomeMessage(); //redisplay welcome message
 		for (int i = 0; i <= turn; i++) //then display all guesses so far
@@ -226,6 +266,19 @@ private:
 		turn++;
 		return false;
 	}
+	/**
+	* Print available letters prints all the letters that the player can use with the colours indicating thier status
+	*/
+	void printAvailableLetters()
+	{
+		cout << "Available letters: ";
+		for (int i = 0; i < ALPHABET.length(); i++)
+		{
+			availableLetters[ALPHABET[i]].displayChar();
+			cout << " ";
+		}
+		cout << endl;
+	}
 
 	/**
 	* gets the player to enter their guess, and then checks if it is valid
@@ -235,6 +288,7 @@ private:
 		int wrongCount = 0;
 		string guess;
 		cout << "Enter your guess" << endl;
+		printAvailableLetters();
 		do {
 			getline(cin, guess); //gets guess from player
 		} while (!isValidWord(guess)); //checks if a valid word
@@ -248,9 +302,22 @@ private:
 			return false;
 		}
 	}
-public:
-	
 
+
+
+public:
+	/**
+	*Game constructor, set up all the availble letters to be used in the game
+	* this is where the availableLetters map is populater
+	*/
+	Game()
+	{
+		
+		for (int i = 0; i < ALPHABET.length(); i++)
+		{	//populate the map with the letters, the status will get picked up from the default constructore
+			availableLetters[ALPHABET[i]].setLetter(ALPHABET[i]);
+		}
+	}
 	
 	/**
 	* play function sets up and starts the game. The player is shown the game rules.
@@ -267,7 +334,7 @@ public:
 			Sleep(1000);
 			cout << wordToFind << endl << endl;
 		}
-
+		//display the welcome message
 		welcomeMessage();
 
 		bool playerWon = false; //flag to check if the player has won;
@@ -296,5 +363,5 @@ public:
 int main()
 {                       
 	Game game;
-	game.play(true);	//starts the game
+	game.play(false);	//starts the game
 }

@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['game_0',['Game',['../class_game.html',1,'']]],
-  ['guesscharacter_1',['GuessCharacter',['../class_guess_character.html',1,'GuessCharacter'],['../class_guess_character.html#aef6a3f785afef435079698d4a1feda14',1,'GuessCharacter::GuessCharacter()']]],
-  ['guesscharacters_2',['guessCharacters',['../class_guess_word.html#a58ad7f404a33e1955629a94354b96224',1,'GuessWord']]],
-  ['guessword_3',['GuessWord',['../class_guess_word.html',1,'']]],
-  ['guesswords_4',['guessWords',['../class_game.html#aca4f1a5e01f6c1aad08a22fa6d390e6c',1,'Game']]]
+  ['found_0',['FOUND',['../_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba3e918e9c9f594bda6b0cf358391c3b1a',1,'WordleOO.cpp']]],
+  ['found_5fwrong_5fplace_1',['FOUND_WRONG_PLACE',['../_wordle_o_o_8cpp.html#a67a0db04d321a74b7e7fcfd3f1a3f70baade1fa51438c9f998f7e79286b77ed6d',1,'WordleOO.cpp']]]
 ];
