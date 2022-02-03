@@ -1,4 +1,4 @@
 <map id="GuessWord" name="GuessWord">
-<area shape="rect" id="node1" title=" " alt="" coords="5,204,167,296"/>
-<area shape="rect" id="node2" href="$class_guess_character.html" title=" " alt="" coords="18,5,154,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,260,216,397"/>
+<area shape="rect" id="node2" href="$class_guess_character.html" title=" " alt="" coords="23,5,198,195"/>
 </map>
