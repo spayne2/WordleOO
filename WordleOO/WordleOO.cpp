@@ -293,7 +293,7 @@ private:
 			getline(cin, guess); //gets guess from player
 		} while (!isValidWord(guess)); //checks if a valid word
 
-		if (checkAndDisplayGuess(guess)) //checks the guess cor correctness, then displays with colour
+		if (checkAndDisplayGuess(guess)) //checks the guess for correctness, then displays with colour
 		{
 			return true;
 		}
@@ -312,7 +312,6 @@ public:
 	*/
 	Game()
 	{
-		
 		for (int i = 0; i < ALPHABET.length(); i++)
 		{	//populate the map with the letters, the status will get picked up from the default constructore
 			availableLetters[ALPHABET[i]].setLetter(ALPHABET[i]);
