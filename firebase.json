@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "Doxygen/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
