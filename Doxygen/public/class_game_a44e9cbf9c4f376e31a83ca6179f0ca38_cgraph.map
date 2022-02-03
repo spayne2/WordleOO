@@ -1,12 +1,16 @@
 <map id="Game::playerGuess" name="Game::playerGuess">
-<area shape="rect" id="node1" title=" " alt="" coords="5,112,165,141"/>
-<area shape="rect" id="node2" href="$class_game.html#a5e77f0c5ee41d17531e12de8211d8683" title=" " alt="" coords="213,72,452,101"/>
-<area shape="rect" id="node9" href="$class_game.html#a0fe1584b29f33bf17dd976447fc0f8ce" title=" " alt="" coords="253,139,412,168"/>
-<area shape="rect" id="node3" href="$class_guess_word.html#a0b8dc3f491b390b645b6c3edd15b355e" title=" " alt="" coords="547,5,709,35"/>
-<area shape="rect" id="node5" href="$class_guess_word.html#a158140ba0693b2e09d3066b1c0145119" title=" " alt="" coords="500,59,756,88"/>
-<area shape="rect" id="node8" href="$class_game.html#add1f07beb90c3a85e640bf343f2f3cda" title=" " alt="" coords="528,112,728,141"/>
-<area shape="rect" id="node4" href="$class_guess_character.html#ac7a6b5befd4b2808249349cf65300a49" title=" " alt="" coords="804,5,1031,35"/>
-<area shape="rect" id="node6" href="$class_guess_character.html#a2c4ca4daff3ffad0d2b515e1e52ce775" title=" " alt="" coords="815,59,1020,88"/>
-<area shape="rect" id="node7" href="$class_guess_character.html#af7a35441a9c05a8b280ad1d28b2ebc27" title=" " alt="" coords="817,112,1018,141"/>
-<area shape="rect" id="node10" href="$class_game.html#ac2d21bf44a3e68ac01b522171bb67bcb" title=" " alt="" coords="514,165,742,195"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,245,165,275"/>
+<area shape="rect" id="node2" href="$class_game.html#a5e77f0c5ee41d17531e12de8211d8683" title=" " alt="" coords="213,165,452,195"/>
+<area shape="rect" id="node12" href="$class_game.html#a0fe1584b29f33bf17dd976447fc0f8ce" title=" " alt="" coords="253,245,412,275"/>
+<area shape="rect" id="node14" href="$class_game.html#af9f553e976692b1dbe351655ee5d1191" title=" " alt="" coords="225,299,440,328"/>
+<area shape="rect" id="node3" href="$class_guess_word.html#a0b8dc3f491b390b645b6c3edd15b355e" title=" " alt="" coords="547,32,709,61"/>
+<area shape="rect" id="node5" href="$class_game.html#aaa8ee9358c0268b758fa6b93a0cc6c2f" title=" " alt="" coords="504,112,752,141"/>
+<area shape="rect" id="node8" href="$class_guess_word.html#a158140ba0693b2e09d3066b1c0145119" title=" " alt="" coords="500,165,756,195"/>
+<area shape="rect" id="node11" href="$class_game.html#add1f07beb90c3a85e640bf343f2f3cda" title=" " alt="" coords="528,219,728,248"/>
+<area shape="rect" id="node4" href="$class_guess_character.html#ac7a6b5befd4b2808249349cf65300a49" title=" " alt="" coords="819,5,1046,35"/>
+<area shape="rect" id="node6" href="$class_guess_word.html#a10dbff1cdd81fe3d38e71f5d2552992d" title=" " alt="" coords="804,59,1061,88"/>
+<area shape="rect" id="node7" href="$class_guess_character.html#ab10296cd0c254c4273e6f7f2fed84101" title=" " alt="" coords="829,112,1036,141"/>
+<area shape="rect" id="node9" href="$class_guess_character.html#a2c4ca4daff3ffad0d2b515e1e52ce775" title=" " alt="" coords="830,165,1035,195"/>
+<area shape="rect" id="node10" href="$class_guess_character.html#abf94f0f4d1d8fcae335a00b74bd13236" title=" " alt="" coords="828,219,1037,248"/>
+<area shape="rect" id="node13" href="$class_game.html#ac2d21bf44a3e68ac01b522171bb67bcb" title=" " alt="" coords="514,272,742,301"/>
 </map>

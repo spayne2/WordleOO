@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status_0',['status',['../class_guess_character.html#ae2570c8fe44e5d5bd6099c57a19dece3',1,'GuessCharacter']]]
+  ['letter_0',['letter',['../class_guess_character.html#a23c13dbaa8bb345e03e6d2d8bde30057',1,'GuessCharacter']]]
 ];

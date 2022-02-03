@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isvalidword_0',['isValidWord',['../class_game.html#a0fe1584b29f33bf17dd976447fc0f8ce',1,'Game']]]
+  ['h_0',['h',['../_wordle_o_o_8cpp.html#a2deb61fc54ae67d6769499949e3ab059',1,'WordleOO.cpp']]]
 ];

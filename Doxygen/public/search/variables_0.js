@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['guesscharacters_0',['guessCharacters',['../class_guess_word.html#a58ad7f404a33e1955629a94354b96224',1,'GuessWord']]],
-  ['guesswords_1',['guessWords',['../class_game.html#aca4f1a5e01f6c1aad08a22fa6d390e6c',1,'Game']]]
+  ['alphabet_0',['ALPHABET',['../_wordle_o_o_8cpp.html#ab62354bd5a11bc87a11a1d53a2abb623',1,'WordleOO.cpp']]],
+  ['availableletters_1',['availableLetters',['../class_game.html#a136f846e80a9ba7baf774f1884f37b6b',1,'Game']]]
 ];

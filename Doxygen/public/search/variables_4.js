@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tries_0',['TRIES',['../_wordle_o_o_8cpp.html#a5dfa39f75d0764e5b2c03a642a7d1f74',1,'WordleOO.cpp']]],
-  ['turn_1',['turn',['../class_game.html#aef6ba37517324fc3469dfa65d6f92d21',1,'Game']]]
+  ['status_0',['status',['../class_guess_character.html#ae2570c8fe44e5d5bd6099c57a19dece3',1,'GuessCharacter']]]
 ];
