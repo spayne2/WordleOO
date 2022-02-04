@@ -85,6 +85,7 @@ private:
 	int wordLength = 0;
 	GuessCharacter* guessCharacters; //array of guess characters
 public:
+	
 	/**
 	* setGuessCharacters sets the guess characted on the guess word, compares to the word to find to get status
 	*/
