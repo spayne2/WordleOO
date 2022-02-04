@@ -1,0 +1,5 @@
+<map id="Game::setAvailableLetterStatus" name="Game::setAvailableLetterStatus">
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,204,70"/>
+<area shape="rect" id="node2" href="$class_guess_word.html#a10dbff1cdd81fe3d38e71f5d2552992d" title=" " alt="" coords="252,5,509,35"/>
+<area shape="rect" id="node3" href="$class_guess_character.html#ab10296cd0c254c4273e6f7f2fed84101" title=" " alt="" coords="277,59,484,88"/>
+</map>
