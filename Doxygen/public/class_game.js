@@ -9,7 +9,7 @@ var class_game =
     [ "populateWordList", "class_game.html#aff845e992fb69e1c2c7f749e8786699c", null ],
     [ "printAvailableLetters", "class_game.html#af9f553e976692b1dbe351655ee5d1191", null ],
     [ "selectWord", "class_game.html#a5872e5f53336a95489970a67d15d5dc0", null ],
-    [ "setAvailableWordsStatus", "class_game.html#aaa8ee9358c0268b758fa6b93a0cc6c2f", null ],
+    [ "setAvailableLetterStatus", "class_game.html#a1aa22be99a91aa5c7752bb49641bbf30", null ],
     [ "welcomeMessage", "class_game.html#add1f07beb90c3a85e640bf343f2f3cda", null ],
     [ "availableLetters", "class_game.html#a136f846e80a9ba7baf774f1884f37b6b", null ],
     [ "guessWords", "class_game.html#aca4f1a5e01f6c1aad08a22fa6d390e6c", null ],

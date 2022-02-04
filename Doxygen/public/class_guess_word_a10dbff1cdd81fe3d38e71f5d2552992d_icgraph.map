@@ -1,8 +1,8 @@
 <map id="GuessWord::getGuessCharacters" name="GuessWord::getGuessCharacters">
-<area shape="rect" id="node1" title=" " alt="" coords="1049,5,1307,35"/>
-<area shape="rect" id="node2" href="$class_game.html#aaa8ee9358c0268b758fa6b93a0cc6c2f" title=" " alt="" coords="753,5,1001,35"/>
-<area shape="rect" id="node3" href="$class_game.html#a5e77f0c5ee41d17531e12de8211d8683" title=" " alt="" coords="467,5,705,35"/>
-<area shape="rect" id="node4" href="$class_game.html#a44e9cbf9c4f376e31a83ca6179f0ca38" title=" " alt="" coords="259,5,419,35"/>
-<area shape="rect" id="node5" href="$class_game.html#a50b01080d0d7c5bfc317801a360c84ac" title=" " alt="" coords="109,5,211,35"/>
-<area shape="rect" id="node6" href="$_wordle_o_o_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,61,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1000,14,1257,43"/>
+<area shape="rect" id="node2" href="$class_game.html#a1aa22be99a91aa5c7752bb49641bbf30" title=" " alt="" coords="753,5,952,52"/>
+<area shape="rect" id="node3" href="$class_game.html#a5e77f0c5ee41d17531e12de8211d8683" title=" " alt="" coords="467,14,705,43"/>
+<area shape="rect" id="node4" href="$class_game.html#a44e9cbf9c4f376e31a83ca6179f0ca38" title=" " alt="" coords="259,14,419,43"/>
+<area shape="rect" id="node5" href="$class_game.html#a50b01080d0d7c5bfc317801a360c84ac" title=" " alt="" coords="109,14,211,43"/>
+<area shape="rect" id="node6" href="$_wordle_o_o_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,14,61,43"/>
 </map>

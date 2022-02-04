@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('class_game.html',''); initResizable();
 <div class="dynheader">
 Collaboration diagram for Game:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -115,8 +116,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a5872e5f53336a95489970a67d15d5dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add1f07beb90c3a85e640bf343f2f3cda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#add1f07beb90c3a85e640bf343f2f3cda">welcomeMessage</a> ()</td></tr>
 <tr class="separator:add1f07beb90c3a85e640bf343f2f3cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa8ee9358c0268b758fa6b93a0cc6c2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#aaa8ee9358c0268b758fa6b93a0cc6c2f">setAvailableWordsStatus</a> ()</td></tr>
-<tr class="separator:aaa8ee9358c0268b758fa6b93a0cc6c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa22be99a91aa5c7752bb49641bbf30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a1aa22be99a91aa5c7752bb49641bbf30">setAvailableLetterStatus</a> ()</td></tr>
+<tr class="separator:a1aa22be99a91aa5c7752bb49641bbf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e77f0c5ee41d17531e12de8211d8683"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a5e77f0c5ee41d17531e12de8211d8683">checkAndDisplayGuess</a> (string guess)</td></tr>
 <tr class="separator:a5e77f0c5ee41d17531e12de8211d8683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9f553e976692b1dbe351655ee5d1191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#af9f553e976692b1dbe351655ee5d1191">printAvailableLetters</a> ()</td></tr>
@@ -140,7 +141,7 @@ Private Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_game.html">Game</a> class contains all the function to play the game and the data needed. It holds and array of guessWord that are the players attempts; It also holds the complete wordLIst and it also holds the word that needs to be found it also holds a turn counter </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00139">139</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00138">138</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad59df6562a58a614fda24622d3715b65" name="ad59df6562a58a614fda24622d3715b65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad59df6562a58a614fda24622d3715b65">&#9670;&nbsp;</a></span>Game()</h2>
@@ -166,7 +167,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p ><a class="el" href="class_game.html">Game</a> constructor, set up all the availble letters to be used in the game this is where the availableLetters map is populater </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00313">313</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00312">312</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -196,7 +197,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p >binarySearchWordList performs a binary searh on the word list </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00165">165</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00164">164</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -230,11 +231,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >checkAndDisplayGuess displays the guess with colour coding, and then tell the player if they have won, or if it is game over </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00252">252</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00251">251</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a5e77f0c5ee41d17531e12de8211d8683_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a5e77f0c5ee41d17531e12de8211d8683_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -269,7 +271,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >isValidWord called from playerGuess checks if a word is of the correct length, and exists in the word list </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00192">192</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00191">191</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -308,11 +310,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >play function sets up and starts the game. The player is shown the game rules. has a bool flag called cheat which if is true, displays the word to be found at the start of the game </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00326">326</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00324">324</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a50b01080d0d7c5bfc317801a360c84ac_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a50b01080d0d7c5bfc317801a360c84ac_cgraph.svg" width="100%" height="504"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -346,11 +349,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >gets the player to enter their guess, and then checks if it is valid </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00286">286</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00285">285</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a44e9cbf9c4f376e31a83ca6179f0ca38_cgraph.svg" width="100%" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a44e9cbf9c4f376e31a83ca6179f0ca38_cgraph.svg" width="100%" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -384,7 +388,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >load in all possible words, called from the play function, private as not needed outside the class </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00152">152</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00151">151</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -417,7 +421,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >Print available letters prints all the letters that the player can use with the colours indicating thier status </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00272">272</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00271">271</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -450,7 +454,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >selectWord generates a random number, and selects a word to play with for the game. Called from the play function </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00212">212</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00211">211</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -459,8 +463,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aaa8ee9358c0268b758fa6b93a0cc6c2f" name="aaa8ee9358c0268b758fa6b93a0cc6c2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa8ee9358c0268b758fa6b93a0cc6c2f">&#9670;&nbsp;</a></span>setAvailableWordsStatus()</h2>
+<a id="a1aa22be99a91aa5c7752bb49641bbf30" name="a1aa22be99a91aa5c7752bb49641bbf30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa22be99a91aa5c7752bb49641bbf30">&#9670;&nbsp;</a></span>setAvailableLetterStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,7 +473,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Game::setAvailableWordsStatus </td>
+          <td class="memname">void Game::setAvailableLetterStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -481,18 +485,20 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >setAvailableWordsStatus set the status of each letter so the player can see what they have left. </p>
+<p >setAvailableLetterStatus set the status of each letter so the player can see what they have left. </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00239">239</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00238">238</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_aaa8ee9358c0268b758fa6b93a0cc6c2f_cgraph.svg" width="564" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_a1aa22be99a91aa5c7752bb49641bbf30_cgraph.svg" width="515" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_aaa8ee9358c0268b758fa6b93a0cc6c2f_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_a1aa22be99a91aa5c7752bb49641bbf30_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -521,7 +527,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >welcomeMessage display the player instructions, called from <a class="el" href="class_game.html#a50b01080d0d7c5bfc317801a360c84ac">play()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00220">220</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00219">219</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -551,7 +557,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00144">144</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00143">143</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -575,7 +581,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00145">145</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00144">144</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -599,7 +605,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00148">148</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00147">147</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -623,7 +629,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00146">146</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00145">145</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +653,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00147">147</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wordle_o_o_8cpp_source.html#l00146">146</a> of file <a class="el" href="_wordle_o_o_8cpp_source.html">WordleOO.cpp</a>.</p>
 
 </div>
 </div>
