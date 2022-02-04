@@ -5,9 +5,8 @@
 #include <string>
 #include <map>
 using namespace std;
-const int WORD_LENGTH = 5; //the length of the word that the player will be guessing
 const int TRIES = 6; //the number of tried
-const string WORD_LIST_FILE = "word_list.txt"; // the name of the file with all the words int
+const string WORD_LIST_FILE = "computing_list.txt"; // the name of the file with all the words int
 const HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); //get a handle on the console
 const string ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 /**
@@ -83,14 +82,17 @@ public:
 class GuessWord
 {
 private:
-	GuessCharacter guessCharacters[WORD_LENGTH]; //array of guess characters
+	int wordLength = 0;
+	GuessCharacter* guessCharacters; //array of guess characters
 public:
 	/**
 	* setGuessCharacters sets the guess characted on the guess word, compares to the word to find to get status
 	*/
 	void setGuessCharacters(string guess, string wordToFind)
 	{
-		for (int i = 0; i < WORD_LENGTH; i++)
+		wordLength = wordToFind.length();
+		guessCharacters = new GuessCharacter[wordLength];
+		for (int i = 0; i < wordLength; i++)
 		{
 			guessCharacters[i].setLetter(guess[i]);
 			if (guess[i] == wordToFind[i])
@@ -121,7 +123,7 @@ public:
 	*/
 	void display()
 	{
-		for (int i = 0; i < WORD_LENGTH; i++)
+		for (int i = 0; i < wordLength; i++)
 		{
 			guessCharacters[i].displayChar();
 		}
@@ -190,9 +192,9 @@ private:
 	**/
 	bool isValidWord(string guess)
 	{
-		if (guess.length() != 5)
+		if (guess.length() != wordToFind.length())
 		{
-			cout << "word is not correct length, it must be exactly 5 chars" << endl;
+			cout << "word is not correct length, it must be exactly " <<wordToFind.length() << " letters long" << endl;
 			return false;
 		}
 		if (binarySearchWordList(guess))
@@ -230,6 +232,9 @@ private:
 		cout << "Green";
 		SetConsoleTextAttribute(h, 7);
 		cout << " if the character is in the word and in the correct place" << endl << endl;
+		SetConsoleTextAttribute(h, 9);
+		cout << "The word to find is " << wordToFind.length() << " letters long " << endl << endl;
+		SetConsoleTextAttribute(h, 7);
 	}
 	
 	/**
@@ -237,7 +242,7 @@ private:
 	*/
 	void setAvailableLetterStatus()
 	{
-		for (int i = 0; i < WORD_LENGTH; i++)
+		for (int i = 0; i < wordToFind.length(); i++)
 		{
 			GuessCharacter *guessChars = guessWords[turn].getGuessCharacters(); //get the current guess word
 			//using the map, copy the status from the guessed word to the available letters
@@ -343,7 +348,10 @@ public:
 				SetConsoleTextAttribute(h, 4); //set text red
 				cout << "Game Over" << endl;
 				SetConsoleTextAttribute(h, 7); //set text white
-				cout << "The word to find was : " << wordToFind;
+				cout << "The word to find was : ";
+				SetConsoleTextAttribute(h, 2);
+				cout << wordToFind;
+				SetConsoleTextAttribute(h, 7);
 				break;
 			}
 			if (playerGuess())
@@ -361,5 +369,5 @@ public:
 int main()
 {                       
 	Game game;
-	game.play(false);	//starts the game
+	game.play(true);	//starts the game
 }
