@@ -3,7 +3,6 @@
 #include <windows.h>                   // you will need this for the Windows console routines
 #include <fstream>
 #include <string>
-#include <iomanip>
 #include <map>
 using namespace std;
 const int WORD_LENGTH = 5; //the length of the word that the player will be guessing
@@ -54,7 +53,7 @@ public:
 			}
 			else if (status == Status::NOT_FOUND)
 			{
-				SetConsoleTextAttribute(h, 8); //display black
+				SetConsoleTextAttribute(h, 8); //display grey
 			}
 			cout << letter;
 			SetConsoleTextAttribute(h, 7); //dispay white
@@ -114,7 +113,7 @@ public:
 	*/
 	GuessCharacter* getGuessCharacters()
 	{
-		return guessCharacters; map<char, GuessCharacter> availableLetters;//holds all letters that can be used in the game;
+		return guessCharacters; 
 	}
 
 	/**
@@ -234,9 +233,9 @@ private:
 	}
 	
 	/**
-	* setAvailableWordsStatus set the status of each letter so the player can see what they have left.
+	* setAvailableLetterStatus set the status of each letter so the player can see what they have left.
 	*/
-	void setAvailableWordsStatus()
+	void setAvailableLetterStatus()
 	{
 		for (int i = 0; i < WORD_LENGTH; i++)
 		{
@@ -252,7 +251,7 @@ private:
 	bool checkAndDisplayGuess(string guess)
 	{
 		guessWords[turn].setGuessCharacters(guess, wordToFind); // the the guess characters, the word to find is needed to it can be compared to
-		setAvailableWordsStatus();
+		setAvailableLetterStatus();
 		system("cls"); //clear the screen
 		welcomeMessage(); //redisplay welcome message
 		for (int i = 0; i <= turn; i++) //then display all guesses so far
