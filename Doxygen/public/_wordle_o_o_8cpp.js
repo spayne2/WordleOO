@@ -13,6 +13,5 @@ var _wordle_o_o_8cpp =
     [ "ALPHABET", "_wordle_o_o_8cpp.html#ab62354bd5a11bc87a11a1d53a2abb623", null ],
     [ "h", "_wordle_o_o_8cpp.html#a2deb61fc54ae67d6769499949e3ab059", null ],
     [ "TRIES", "_wordle_o_o_8cpp.html#a5dfa39f75d0764e5b2c03a642a7d1f74", null ],
-    [ "WORD_LENGTH", "_wordle_o_o_8cpp.html#a5599bbc03b26cd2bcfe649f58ca8626e", null ],
     [ "WORD_LIST_FILE", "_wordle_o_o_8cpp.html#a616cacb3cbac184146fec8b19623975a", null ]
 ];

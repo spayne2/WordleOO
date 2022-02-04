@@ -46,7 +46,7 @@
 <polygon fill="white" stroke="black" points="4.5,-334.5 4.5,-462.5 177.5,-462.5 177.5,-334.5 4.5,-334.5"/>
 <text text-anchor="middle" x="91" y="-448.9" font-family="Helvetica,sans-Serif" font-size="12.00">GuessWord</text>
 <polyline fill="none" stroke="black" points="4.5,-441.5 177.5,-441.5 "/>
-<text text-anchor="middle" x="91" y="-427.9" font-family="Helvetica,sans-Serif" font-size="12.00"> </text>
+<text text-anchor="start" x="12.5" y="-427.9" font-family="Helvetica,sans-Serif" font-size="12.00">&#45; int wordLength</text>
 <polyline fill="none" stroke="black" points="4.5,-420.5 177.5,-420.5 "/>
 <text text-anchor="start" x="12.5" y="-406.9" font-family="Helvetica,sans-Serif" font-size="12.00">+ void setGuessCharacters</text>
 <text text-anchor="start" x="12.5" y="-393.9" font-family="Helvetica,sans-Serif" font-size="12.00">(string guess, string</text>
